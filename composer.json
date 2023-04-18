@@ -1,0 +1,40 @@
+{
+  "name": "majhar/test",
+  "description": "This is a test",
+  "keywords": [],
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "Majhar\\CommissionCalculation\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Majhar\\CommissionCalculation\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-bcmath": "*",
+    "phplucidframe/console-table": "^1.2",
+    "symfony/http-client": "^6.2",
+    "ext-http": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "friendsofphp/php-cs-fixer": "v3.16.0"
+  },
+  "config": {
+    "sort-packages": true,
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "phpunit": "phpunit",
+    "fix-cs": "php-cs-fixer fix",
+    "test-cs": "php-cs-fixer fix --dry-run -v",
+    "test": [
+      "@phpunit",
+      "@test-cs"
+    ]
+  }
+}
